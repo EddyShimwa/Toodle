@@ -15,9 +15,9 @@ const handleAddTask = () => {
   
 }
 
-const completeTask = (idx) => {
+const completeTask = (index) => {
   let itemsCopy = [...taskItems];
-  itemsCopy.splice(idx, 1);
+  itemsCopy.splice(index, 1);
   setTaskItems(itemsCopy)
 }
 
@@ -27,20 +27,19 @@ const completeTask = (idx) => {
              <Text style={styles.sectionTitle}>Today's tasks</Text>
              <View styles={styles.items}>
               {
-                taskItems.map((item, idx) => {
-                 return 
-                 (
-                  <TouchableOpacity key={idx} onPress={() => completeTask(idx)}>
-                      <Task key={idx} text={item} />
-                  </TouchableOpacity>
-                 )
+                taskItems.map((item, index) => {
+                  return (
+                    <TouchableOpacity key={index} onPress={() => completeTask(index)}>
+                      <Task text={item} />
+                    </TouchableOpacity>
+                  )
                  
                 })
               }
             </View>
            </View>
 
-           {/* write a task */}
+           
            <KeyboardAvoidingView
             behavior={Platform.OS === "ios" ? "padding" : "height"}
             style={styles.writeTaskWrapper}
@@ -114,4 +113,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default App
+export default App;
