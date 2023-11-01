@@ -1,13 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { StatusBar } from 'expo-status-bar';
 
 import {StyleSheet, View } from 'react-native';
 import Todos from './components/Todos';
+import HomeScreen from './components/HomeScreen';
+
 const App = () => {
 
 
   return (
     <View style={styles.container}>
-      <Todos />
+      <HomeScreen />
+      <StatusBar style="auto" />
+      {/* <Todos /> */}
       </View>
   );
 };
