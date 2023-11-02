@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 
-import {KeyboardAvoidingView, Keyboard, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import {KeyboardAvoidingView, Keyboard, StyleSheet, Text, View, TextInput, TouchableOpacity, Platform } from 'react-native';
 import Task from './Task';
+import { useNavigation } from '@react-navigation/native';
 
 const Todos = () => {
-
+  const navigation = useNavigation();
   const [task, setTask] = useState();
   const [taskItems, setTaskItems] = useState([])
 
@@ -25,7 +26,6 @@ const completeTask = (index) => {
     
     <View style={styles.container}>
            <View style={styles.taskWrapper}>
-             <Text style={styles.sectionTitle}>Today's tasks</Text>
              <View styles={styles.items}>
               {
                 taskItems.map((item, index) => {
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   
   },
   taskWrapper: {
-      paddingTop: 80,
+      paddingTop: 20,
       paddingHorizontal: 20,
 
   },
