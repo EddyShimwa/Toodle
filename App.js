@@ -8,7 +8,7 @@ import { StyleSheet, View } from "react-native";
 import Todos from "./components/Todos";
 // import HomeScreen from "./components/HomeScreen";
 // import CartScreen from "./components/CartScreen";
-// import ContactScreen from "./components/ContactScreen";
+import ContactScreen from "./components/ContactScreen";
 import { TouchableOpacity } from "react-native-web";
 import { useNavigation } from "@react-navigation/native";
 const Stack = createNativeStackNavigator();
