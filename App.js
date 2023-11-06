@@ -3,7 +3,6 @@ import { IoMdSettings } from "react-icons/io";
 import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Button } from "react-native";
 import { StyleSheet, View } from "react-native";
 import Todos from "./components/Todos";
 // import HomeScreen from "./components/HomeScreen";
